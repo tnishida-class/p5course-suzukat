@@ -5,10 +5,11 @@ function setup(){
 
 
   // 空欄を埋めて神戸市のロゴマークを完成させよう
-  noFill();
+
+   noFill();
   strokeWeight(25);
   strokeCap(SQUARE);
-
+　stroke(22, 131, 46);
   arc(100 + 25, 100, 100, 100, QUARTER_PI * 3, QUARTER_PI * 3 + PI);
   arc(100 - 25, 100, 100, 100, QUARTER_PI * 5, QUARTER_PI * 5 + PI);
 
@@ -24,9 +25,9 @@ fill(blue);
 noStroke();
   ellipse(300,100,99,99);
   fill(255);
-    ellipse(293,93,81,81);
-    fill(green);
-    ellipse(292,92,75,75);
-    fill(255);
-      ellipse(291,95,70,70);
+  ellipse(293,93,81,81);
+  fill(green);
+  ellipse(292,92,75,75);
+  fill(255);
+  ellipse(291,95,70,70);
 }
