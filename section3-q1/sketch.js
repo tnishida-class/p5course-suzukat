@@ -4,13 +4,17 @@ let cycle;
 
 function setup(){
   createCanvas(200, 200);
-  count = 0;
+  count = 50;
   cycle = 100;
 }
 
 function draw(){
   background(160, 192, 255);
   count = (count + 1) % cycle;
-  // BLANK[1]
-  ellipse(width / 2, height / 2, size);
+
+   // BLANK[1]
+   if(count>40 &&count<=50){ellipse(width / 2, height / 2,count);}
+   else if(count>50 && count<=60){ellipse(width / 2, height / 2, 100-count);}
+   else {ellipse(width / 2, height / 2, 40);}
+
 }
