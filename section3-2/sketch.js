@@ -7,7 +7,7 @@ function setup(){
   createCanvas(windowWidth, windowHeight);
   x = width / 2;
   y = height / 2;
-  vx = 8;
+  // vx = 8;
   vy = 8;
 
 }
@@ -15,21 +15,25 @@ function setup(){
 function draw(){
   background(160, 192, 255);
   ellipse(x, y, 20, 20);
-  if(keyIsDown(RIGHT_ARROW)){ x += vx;}
-  if(keyIsDown(LEFT_ARROW)){x -= vx;}
-  if(keyIsDown(" ".charCodeAt(0)))
-  {
-　  y += vy;
-   vy += g;
-   vy = constrain(vy, -vyMax, vyMax);
-　 if(y < 0 || y > height){ vy = -1 * vy; }
- 　y = constrain(y, 0, height );
-}
+  if(keyIsDown(RIGHT_ARROW)){ x +=5;}
+  if(keyIsDown(LEFT_ARROW)){x -= 5;}
+  if(y>=height-10&& keyIsDown(" ".charCodeAt(0))){vy=-20;}
 
-  if(x > width){ x = 0; }
-  else if(x < 0){ x = width; }
-  if(y > height){ y = 0; }
-  if(y < 0){ y = height; }
+　  y += vy;
+   // vy += g;
+   vy = constrain(vy+g, -vyMax, vyMax);
+   if(y > height){ vy = 0; }
+   x=constrain(x,0,width);
+   y=constrain(y,0,height-10);
+
+ // 　y = constrain(y, 0, height );
+
+  //
+  // if(x > width){ x = 0; }
+  // else if(x < 0){ x = width; }
+  // if(y > height){ y = 0; }
+  // if(y < 0){ y = height; }
+
 
 }
 
