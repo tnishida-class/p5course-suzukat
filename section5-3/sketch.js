@@ -27,7 +27,20 @@ function isLeapYear(y){
 
 function daysInYear(y){
   // BLANK[1]
+  return isLeapYear(y)? 366:365;
+  // for(let y = 2000; y <= 2100; y++){
+  //   if((y % 4 == 0) && (y % 100 != 0) || (y % 400 == 0)){
+  //     console.log(i + "366");
+  //   }
+  //   else{
+  //     console.log(i + "365");
+  //   }
+  // }
 }
+function daysInYear(y){
+  return((y % 4 == 0) && (y % 100 != 0) || (y % 400 == 0));
+}
+
 
 function daysInMonth(y, m){
   if(m == 2){
@@ -51,6 +64,11 @@ function dayOfYear(y, m, d){
 
 function dayOfWeek(y, m, d){
   // BLANK[2]
+  let count=0;1
+  for (let i=1970;i<y;i++){
+    count +=dayOfYear(y,m,d);
+    return (count+2)%7;
+  }
 }
 
 function dayOfWeekAsString(dow){
